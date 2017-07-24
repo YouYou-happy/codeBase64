@@ -7,7 +7,7 @@ Include Number, English, Chinese, Korean and so on.<br>
 And you can set the Secret Key by your own situation.
 
 ###Example
-I write a simple demo for example.[Online Demo](https://wangyiyao.github.io/codeBase64/)<br>
+I write a simple demo for example.[Online Demo](https://youyou-happy.github.io/codeBase64/)<br>
 If you do not fill Secret Key, the default is null. Result is encode or decode your input directly.
 
 ###Usage

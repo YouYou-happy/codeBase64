@@ -6,7 +6,33 @@
 	<script type="text/javascript" src="codeBase64.min.js"></script>
 	<link rel="stylesheet" type="text/css" href="index.css"/>
 	<style type="text/css">
-	
+	    *{
+			box-sizing: border-box;
+		}
+		.container{
+			width: 75%;
+			margin: 5% auto;
+		}
+		.show{
+			display: inline-block;
+			vertical-align: bottom;
+			width: 23%;
+		}
+		textarea{
+			width: 100%;
+			border: 1px solid #5D5B5B;
+			border-radius: 3px;
+		}
+		.ctrl{
+			display: inline-block;
+			width: 50%;
+			vertical-align: bottom;
+		}
+		.en-box, .de-box{
+			width:100%;
+			padding: 3% 10% 0 10%;
+		}
+
 	</style>
 </head>
 <body>
@@ -25,7 +51,7 @@
 	</p>
 	<p>
 		<span class="lab lab-text">plaintext</span>
-		<textarea rows="5" class="plaintext"></textarea>	
+		<textarea class="txt" rows="5" class="plaintext"></textarea>	
 	</p>
 	<button class="encrypt">encode</button>
 </div>
@@ -42,7 +68,7 @@
 	</p>
 	<p>
 		<span class="lab lab-text">ciphertext</span>
-		<textarea rows="5" class="ciphertext"></textarea>
+		<textarea class="txt" rows="5" class="ciphertext"></textarea>
 	</p>
 	<button class="decrypt">decode</button>
 </div>
@@ -50,77 +76,24 @@
 <div class="about">
 	<div class="box">
 		<h4>About</h4>
-		<p>This is a JavaScript plug-in can be <em>encoded and decoded</em> with Base64.</p>
-		<p>This plug-in can used for characters which UNICODE is between 0000 0000 and 0000 FFFF. Include <em>Number, English, Chinese, Korean</em> and so on.</p>
+		<p>This is a JavaScript plug-in that can <em>encode and decode</em> characters with Base64.</p>
+		<p>This plug-in can be used for characters that UNICODE is between 0000 0000 and 0000 FFFF. Include <em>Number, English, Chinese, Korean</em> and so on.</p>
 		<p>And you can set <em>the Secret Key</em> by your own situation.</p>
 	</div>
 	<div class="box">
 		<h4>Usage</h4>
 		<p>To use codeBase64, the following files should always be included.</p>
 		<p class="code">&lt;meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/&gt;</br>&lt;script type="text/javascript" src="codeBase64.js"&gt;&lt;/script&gt;</p>
-		<p>Suppose we want to encode a string, then decode it. If you do not fill Secret Key, the default is null. Result is encode or decode your input directly. CodeBase64 makes it as simple as:</p>
+		<p>Suppose we want to encode a string, then decode it. If you do not fill Secret Key, the default is null. Result is what that encode or decode your input directly. CodeBase64 makes it as simple as:</p>
 		<p class="code">var result = codeBase64.encode('hello'[,headKey,endKey]);</br>var str = codeBase64.decode(result[,headKey,endKey]);</p>
-		
+		<p>If you have any questions, you can refer to <a href="https://github.com/YouYou-happy/codeBase64" target="_blank">the source</a> of this demo, or Email <em>18251825510@163.com</em>.</p>
 	</div>
 	<div class="box">
 		<h4>Dowload</h4>
-		<p>It is an open-source project under MIT License.</p>
+		<p>CodeBase64 is an open-source project under MIT License.</p>
 		<p><a id="view" href="https://github.com/YouYou-happy/codeBase64" target="_blank">View at Github</a><a id="download" href="codeBase64.js" download="codeBase64.js" target="_blank">Download codeBase64.js</a><a id="downloadMin" href="codeBase64.min.js" download="codeBase64.min.js" target="_blank">Download codeBase64.min.js</a></p>
 	</div>
 </div>
-<script type="text/javascript" src="index.js"></script>
-=======
-	<style type="text/css">
-	*{
-		box-sizing: border-box;
-	}
-	.container{
-		width: 75%;
-		margin: 5% auto;
-	}
-	.show{
-		display: inline-block;
-		vertical-align: bottom;
-		width: 23%;
-	}
-	textarea{
-		width: 100%;
-		border: 1px solid #5D5B5B;
-		border-radius: 3px;
-	}
-	.ctrl{
-		display: inline-block;
-		width: 50%;
-		vertical-align: bottom;
-	}
-	.en-box, .de-box{
-		width:100%;
-		padding: 3% 10% 0 10%;
-	}
-	</style>
-</head>
-<body>
-<div class="container">
-	<div class="show">
-		<textarea placeholder="Plaintext" rows="5" class="plaintext"></textarea>
-	</div>
-	<div class="ctrl">
-		<div class="en-box">
-			<input type="text" placeholder="secret key(head)"></input>
-			<input type="text" placeholder="secret key(end)"></input>
-			<button class="encrypt">encode</button>
-		</div>
-		<dir class="de-box">
-			<input type="text" placeholder="secret key(head)"></input>
-			<input type="text" placeholder="secret key(end)"></input>
-			<button class="decrypt">decode</button>
-		</dir>
-	</div>
-	<div class="show">
-		<textarea placeholder="Ciphertext" rows="5" class="ciphertext"></textarea>
-	</div>
-</div>
-
 
 <script type="text/javascript">
 	function encode(){
@@ -154,7 +127,6 @@
 		document.getElementsByClassName('decrypt')[0].onclick = function(){decode();};
 	}
 </script>
->>>>>>> 14356f04e49f4b52a2eab256c9754212a85c0672
 
 </body>
 </html>
